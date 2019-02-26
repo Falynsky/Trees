@@ -1,27 +1,26 @@
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DrzewoTest {
-    Drzewo tree;
+class TreeTest {
+    Tree tree;
     @BeforeEach
     void setUp(){
-        tree = new Drzewo(true,4,"twarda");
+        tree = new Tree(true,4,"twarda");
     }
     @Test
     void getWysokosc(){
-        assertEquals(4,tree.getWysokosc());
+        assertEquals(4,tree.getHeight());
     }
     @Test
     void getPrzekrojDrzewa(){
-        assertEquals("twarda",tree.getPrzekrojDrzewa());
+        assertEquals("twarda",tree.getSectionOfATree());
     }
 
     @Test
     void isWiecznieZielone(){
-        boolean test = tree.isWiecznieZielone();
+        boolean test = tree.isEvergreen();
         assertTrue(test);
     }
 }
